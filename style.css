@@ -52,6 +52,36 @@ section {
     color: white;
 }
 
+
+
+
+.social-icons a {
+        position: relative;
+        text-decoration: none;
+    }
+
+    .social-icons a::after {
+        content: attr(data-title);
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: rgb(27, 27, 233);
+        padding: 5px 8px;
+        border-radius: 4px;
+        white-space: nowrap;
+        font-size: 12px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+
+    .social-icons a:hover::after {
+        opacity: 1;
+    }
+
+
+
 /* List styling */
 .list-unstyled li {
     margin-bottom: 0.5rem;

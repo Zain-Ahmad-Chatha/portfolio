@@ -107,6 +107,34 @@ footer {
     color: var(--accent-color);
 }
 
+.social-icons a {
+        position: relative;
+        text-decoration: none;
+        /* color: #333; */
+        font-size: 24px;
+    }
+
+    .social-icons a::after {
+        content: attr(data-title);
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #333;
+        color: #fff;
+        padding: 5px 8px;
+        border-radius: 4px;
+        white-space: nowrap;
+        font-size: 12px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+    }
+
+    .social-icons a:hover::after {
+        opacity: 1;
+    }
+
 /* Navbar customization */
 .navbar {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
